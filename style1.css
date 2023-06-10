@@ -1,0 +1,60 @@
+
+.container{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    color: #fff;
+    background-image: url("wallpaperflare.com_wallpaper\ \(1\).jpg");
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+.radio {
+    margin-top: 50px;
+    display: inline-block;
+}
+
+.white {
+    color: #fff !important;
+}
+
+.headings {
+    margin-top: 10px;
+    border: #5583f6 solid 2px;
+    padding: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.question{
+    margin-top: 15px;
+    margin-left: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+.question > h6{
+    border: #5583f6 solid 2px;
+    padding: 10px;
+    padding-top: 4px;
+    margin-right: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: start;
+}
+.time{
+    position: absolute;
+    right: 20px;
+}
+.btnNext{
+    margin-top:25px ; 
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.off{
+    display: none;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="headings">
+            <h5 class="head">Belong to JavaScript Questions.</h5>
+        </div>
+        <div class="question">
+            <h6 id="question"></h6>
+        </div>
+        <div class="time">
+
+            <h5 class="timer" onchange=" nextQuestion()">Time: <span id="min">00</span>m <span id="sec" >00</span>s</h5>
+        </div>
+        <div class="radio">
+            <form>
+                <input id="a" type="radio" name="hopping" value="1">
+                <label for="a" id="a1"><span></span></label>
+                <input id="b"   type="radio" name="hopping" value="2">
+                <label for="b" id="b1"><span></span></label>
+                <input id="c"   type="radio" name="hopping" value="3">
+                <label for="c" id="c1"><span></span></label>
+                <div class="worm">
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                    <div class="worm__segment"></div>
+                </div>
+            </form>
+        </div>
+        <div class="btnNext">
+            <button class="flex button-64" id="btn"  onclick="quizs()" role="button"><span class="text">Next</span></button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
