@@ -15,11 +15,7 @@
   body {
     background: #e3e4e8;
     color: #17181c;
-    /* display: flex; */
     font: 1em Hind, sans-serif;
-    /* height: 100vh; */
-    /* line-height: 1.5; */
-    /* padding: 1.5em 0; */
   }
   form {
     margin-left: 49px !important;
@@ -364,4 +360,5 @@
       min-width: 196px;
     }
   }
-  
+
+

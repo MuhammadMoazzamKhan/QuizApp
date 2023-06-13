@@ -149,9 +149,17 @@ const a = document.getElementById("a1")
 const b = document.getElementById("b1")
 const c = document.getElementById("c1")
 const btn = document.getElementById("btn")
-console.log(btn)
+const container = document.getElementsByClassName("container")[0];
+const container1 = document.getElementsByClassName("container")[1];
 let count = 0;
 let score = 0;
+let p30 = document.getElementById("p30");
+let p60 = document.getElementById("p60");
+let p90 = document.getElementById("p90");
+let percent = document.getElementById("percentText");
+let totalQuestion = document.getElementById("totalQuestion");
+let solveQuestion = document.getElementById("solveQuestion");
+let finalQuestion = document.getElementById("finalQuestion");
 function quizs() {
     for (let i = 0; i < hope.length; i++) {
         if (hope[i].checked) {
@@ -161,13 +169,24 @@ function quizs() {
             hope[i].checked = false
             if (quiz[count - 1][`tell${hope[i].value}`] === quiz[count - 1][`answer`]) {
                 score++
+                console.log(score)
             }
         }
 
     }
     if (count > quiz.length - 1) {
-        console.log("option end")
         btn.classList.add("off")
+        container.classList.add("off")
+        container1.classList.remove("off")
+        createStyleLink()
+        clearInterval(interval)
+        let result = scorePercentage(score)
+        percent.innerHTML = `${scorePercentage(score)}%`
+        percentageCircle(result)
+        exitfullscreen()
+        totalQuestion.innerHTML = `Total Question : ${quiz.length}`
+        solveQuestion.innerHTML = `Correct answer : ${score}`
+        finalQuestion.innerHTML = `Your percentage : ${scorePercentage(score)}`
     } else {
         question.innerHTML = quiz[count].ask
         a.innerHTML = `<label for="a"><span></span>${quiz[count].tell1}</label>`
@@ -190,7 +209,7 @@ let interval = setInterval(() => {
             secs = 3;
         } else {
             minutes--
-            secs = 3;
+            secs = 60;
         }
     }
 
@@ -198,3 +217,24 @@ let interval = setInterval(() => {
     sec.innerHTML = secs
 }, 1000);
 
+function createStyleLink() {
+    let link = document.createElement("link");
+    link.rel = "stylesheet"
+    link.href = "style3.css";
+    document.head.appendChild(link);
+}
+
+function scorePercentage(num) {
+    return Math.floor((num / 20) * 100);
+}
+
+
+function percentageCircle(num) {
+    if (num > 70) {
+        p90.classList.remove('off')
+    } else if (num > 50) {
+        p60.classList.remove("off")
+    } else {
+        p30.classList.remove("off")
+    }
+}

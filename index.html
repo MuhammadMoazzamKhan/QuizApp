@@ -2,73 +2,173 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style1.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style1.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="headings">
-            <h5 class="head">Belong to JavaScript Questions.</h5>
-        </div>
-        <div class="question">
-            <h6 id="question"></h6>
-        </div>
-        <div class="time">
-
-            <h5 class="timer" onchange=" nextQuestion()">Time: <span id="min">00</span>m <span id="sec" >00</span>s</h5>
-        </div>
-        <div class="radio">
-            <form>
-                <input id="a" type="radio" name="hopping" value="1">
-                <label for="a" id="a1"><span></span></label>
-                <input id="b"   type="radio" name="hopping" value="2">
-                <label for="b" id="b1"><span></span></label>
-                <input id="c"   type="radio" name="hopping" value="3">
-                <label for="c" id="c1"><span></span></label>
-                <div class="worm">
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                </div>
-            </form>
-        </div>
-        <div class="btnNext">
-            <button class="flex button-64" id="btn"  onclick="quizs()" role="button"><span class="text">Next</span></button>
-        </div>
+  <div class="container">
+    <div class="headings">
+      <h5 class="head">Belong to JavaScript Questions.</h5>
     </div>
+    <div class="question">
+      <h6 id="question"></h6>
+    </div>
+    <div class="time">
 
-    <script src="app.js"></script>
+      <h5 class="timer" onchange=" nextQuestion()">Time: <span id="min">00</span>m <span id="sec">00</span>s</h5>
+    </div>
+    <div class="radio">
+      <form>
+        <input id="a" type="radio" name="hopping" value="1">
+        <label for="a" id="a1"><span></span></label>
+        <input id="b" type="radio" name="hopping" value="2">
+        <label for="b" id="b1"><span></span></label>
+        <input id="c" type="radio" name="hopping" value="3">
+        <label for="c" id="c1"><span></span></label>
+        <div class="worm">
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+          <div class="worm__segment"></div>
+        </div>
+      </form>
+    </div>
+    <div class="btnNext">
+      <button class="flex button-64" id="btn" onclick="quizs()" role="button"><span class="text">Next</span></button>
+    </div>
+  </div>
+  <div class="container off">
+    <aside class="profile-card">
+      <header>
+        <!-- here’s the avatar -->
+        <a target="_blank" href="#">
+          <img src="Test-Logo.png"   class="hoverZoomLink">
+        </a>
+
+        <!-- the username -->
+        <h1>
+          JavaScript Test
+        </h1>
+
+        <!-- and role or location -->
+        <h2>
+          Result
+        </h2>
+
+      </header>
+
+      <!-- bit of a bio; who are you? -->
+      <div class="profile-bio">
+        <h3>
+          <div class="flex-wrapper">
+            <div class="single-chart off" id="p30">
+              <svg viewBox="0 0 36 36" class="circular-chart orange">
+                <path class="circle-bg" d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <path class="circle" stroke-dasharray="30, 100" d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <text x="18" y="20.35" class="percentage" id="percentText"></text>
+              </svg>
+            </div>
+          </div>
+        </h3>
+          <h3>
+           <div class="flex-wrapper ">
+            <div class="single-chart off" id="p60">
+              <svg viewBox="0 0 36 36" class="circular-chart green">
+                <path class="circle-bg" d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <path class="circle" stroke-dasharray="60, 100" d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <text x="18" y="20.35" class="percentage" id="percent"></text>
+              </svg>
+            </div>
+            </div>
+          </h3>
+            <h3>
+            <div class="flex-wrapper ">
+            <div class="single-chart off" id="p90">
+              <svg viewBox="0 0 36 36" class="circular-chart blue">
+                <path class="circle-bg" d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <path class="circle" stroke-dasharray="90, 100" d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <text x="18" y="20.35" class="percentage percent"></text>
+              </svg>
+            </div>
+            
+          </div>
+        </h3>
+        <h3 id="totalQuestion"></h3>
+        <h3 id="solveQuestion"></h3>
+        <h3 id="finalQuestion"></h3>
+      </div>
+
+      <!-- some social links to show off -->
+      <ul class="profile-social-links">
+        <li>
+          <a target="_blank" href="mailto:kmoazzamkhan1@gmail.com?">
+            <i class="fa-sharp fa-solid fa-g"></i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.linkedin.com/in/muhammad-moazzam-khan-494845279/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B2%2FTc2Ax9RCmWjNM2Hc6RBg%3D%3D">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/MuhammadMoazzamKhan">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://wa.me/+923456078607">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </div>
+
+  <script src="app.js"></script>
 </body>
+
 </html>
